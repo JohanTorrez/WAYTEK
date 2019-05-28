@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="card ml-auto mt-3 mb-0 text-center col-lg-6 col-md-6 col-sm-6" style="widht=18rem">
+    <div class="card ml-auto mt-3 mb-4 text-center col-lg-6 col-md-6 col-sm-6" style="widht=18rem">
         <div class="card-header py-2">
           <ul class="nav nav-pills card-header-pills">
             <li class="nav-item">
@@ -29,50 +29,50 @@
             
           <form action="insert-vendedor.php" method="POST">
             <div class="form-row">
-              <div class="form-group col-md-4">
+              <div class="form-group col-md-4 col-sm-4">
                 <label class="h6" for="inputName"><strong>Nombre de la tienda</strong></label>
                 <input type="text" class="form-control" name="nombre" id="inputEmail4" placeholder="" required  autocomplete="off">
               </div>
-              <div class="form-group col-md-4">
+              <div class="form-group col-md-4 col-sm-4">
                 <label class="h6" for=""><strong>Número de documento</strong></label>
                 <input type="number" class="form-control" name="documento" id="" placeholder="# identificación" required autocomplete="off">
               </div>
-              <div class="form-group col-md-4">
+              <div class="form-group col-md-4 col-sm-4">
                 <label class="h6" for="inputAddress2"><strong>Teléfono de contacto</strong></label>
                 <input type="number" class="form-control" name="telefono" id="inputPhone" placeholder="" required autocomplete="off">
               </div>
             </div>
             <div class="form-row">
-              <div class="form-group col-md-4">
+              <div class="form-group col-md-4 col-sm-4">
                 <label class="h6" for="inputCity"><strong>Ciudad</strong></label>
                 <input type="text" class="form-control" name="ciudad" id="inputCity" required autocomplete="off">
               </div>
-              <div class="form-group col-md-4">
+              <div class="form-group col-md-4 col-sm-4">
                 <label class="h6" for="inputState"><strong>Departamento</strong></label>
                 <select id="inputState" class="form-control" name="departamento">
                   <option selected>Huila</option>
                   <option>...</option>
                 </select>
               </div>
-              <div class="form-group col-md-4">
+              <div class="form-group col-md-4 col-sm-4">
                 <label class="h6" for="inputZip"><strong>Dirección local</strong></label>
                 <input type="text" class="form-control" name="dire_residen" id="inputZip" required autocomplete="off">
               </div>
             </div>
 
             <div class="form-row">
-              <div class="form-group col-6">
+              <div class="form-group col-md-6 col-sm-6">
                 <label class="h6" for="inputEmail"><strong>Correo electrónico</strong></label>
                 <input type="email" class="form-control" name="correo" id="inputEmail" placeholder="example@email.com" required autocomplete="off">
               </div>
-              <div class="form-group col-6">
+              <div class="form-group col-md-6 col-sm-6">
                 <label class="h6" for=""><strong>Elija un nombre de usuario</strong></label>
                 <input type="text" class="form-control" name="usuario" id="" placeholder="nickname000" required autocomplete="off">
               </div>
             </div>
-            <div class="custom-file">
-                <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-                <label class="custom-file-label" name="imagen" for="validatedCustomFile">Elige una imagen que te identifique (ávatar)...</label>
+            <div class="custom-file my-3">
+                <input type="file" class="custom-file-input" name="imagen" lang="es" id="validatedCustomFile" required>
+                <label class="custom-file-label" for="validatedCustomFile">Elige una imagen que te identifique (ávatar)...</label>
                 <div class="invalid-feedback">Example invalid custom file feedback</div>
             </div>
             <div class="form-group">
