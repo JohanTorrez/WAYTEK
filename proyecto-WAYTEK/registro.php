@@ -26,53 +26,53 @@
 
           <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
             
-          <form action="registro.php" method="POST">
+          <form action="insert_vendedor.php" method="POST">
             <div class="form-row">
               <div class="form-group col-md-4">
                 <label class="h6" for="inputName"><strong>Nombre de la tienda</strong></label>
-                <input type="text" class="form-control" name="nombre" id="inputEmail4" placeholder="">
+                <input type="text" class="form-control" name="nombre" id="inputEmail4" placeholder="" required>
               </div>
               <div class="form-group col-md-4">
                 <label class="h6" for=""><strong>Número de documento</strong></label>
-                <input type="number" class="form-control" name="documento" id="" placeholder="# identificación">
+                <input type="number" class="form-control" name="documento" placeholder="# identificación" required>
               </div>
               <div class="form-group col-md-4">
                 <label class="h6" for="inputAddress2"><strong>Teléfono de contacto</strong></label>
-                <input type="number" class="form-control" name="telefono" id="inputPhone" placeholder="">
+                <input type="number" class="form-control" name="telefono" id="inputPhone" placeholder="" required>
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-4">
                 <label class="h6" for="inputCity"><strong>Ciudad</strong></label>
-                <input type="text" class="form-control" name="ciudad" id="inputCity">
+                <input type="text" class="form-control" name="ciudad" id="inputCity" required>
               </div>
               <div class="form-group col-md-4">
                 <label class="h6" for="inputState"><strong>Departamento</strong></label>
-                <select id="inputState" class="form-control" name="departamento">
+                <select id="inputState" class="form-control" name="departamento" required>
                   <option selected>Huila</option>
                   <option>...</option>
                 </select>
               </div>
               <div class="form-group col-md-4">
                 <label class="h6" for="inputZip"><strong>Dirección local</strong></label>
-                <input type="text" class="form-control" name="dire_residen" id="inputZip">
+                <input type="text" class="form-control" name="dire_residen" id="inputZip" required>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group col-6">
                 <label class="h6" for="inputEmail"><strong>Correo electrónico</strong></label>
-                <input type="email" class="form-control" name="correo" id="inputEmail" placeholder="example@email.com">
+                <input type="email" class="form-control" name="correo" id="inputEmail" placeholder="example@email.com" required>
               </div>
               <div class="form-group col-6">
                 <label class="h6" for=""><strong>Elija un nombre de usuario</strong></label>
-                <input type="text" class="form-control" name="usuario" id="" placeholder="nickname000">
+                <input type="text" class="form-control" name="usuario" id="" placeholder="nickname000" required>
               </div>
             </div>
 
             <div class="form-group">
               <label class="h6" for="inputEmail"><strong>Contraseña</strong></label>
-              <input type="password" class="form-control" name="contrasena" id="inputPassword" placeholder="Elige una contraseña">
+              <input type="password" class="form-control" name="contrasena" id="inputPassword" placeholder="Elige una contraseña" required>
             </div>
             <div class="form-group">
               <div class="form-check">
@@ -89,33 +89,10 @@
         </div>
       </div>
 
-  <?php
-      if (isset($_POST['btnenviar']))
-      {
-        include("conexion_waytek.php");
-
-        $nombre_clien=$_POST['nombre'];
-        $apelli_clien=$_POST['apellido'];
-        $fecha_nacimi=$_POST['fecha_na'];
-        $doc_usua=$_POST['documento'];
-        $telefono_clien=$_POST['telefono'];
-        $ciudad_clien=$_POST['ciudad'];
-        $departamento_clien=$_POST['departamento'];
-        $direccion_clien=$_POST['dire_residen'];
-        $correo_clien=$_POST['correo'];
-        $usuario_clien=$_POST['usuario'];
-        $contrase_clien=$_POST['contrasena'];
-
-        $conexion->query("INSERT INTO $tabla_usuario(id_cliente,nombre_cliente,apellido_cliente,fech_naci_cliente,
-        e_mail_cliente,nom_usu_cliente,contrase_cliente)VALUES('$doc_usua','$nombre_clien','$apelli_clien','$fecha_nacimi','$telefono_clien','$ciudad_clien',
-        '$departamento_clien','$direccion_clien','$correo_clien','$usuario_clien','$contrase_clien')");
-
-        echo "Se insertaron los datos correctamente.";
-      }
-  ?>
-
-    <script src="js/jquery-3.3.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 </body>
 </html>
