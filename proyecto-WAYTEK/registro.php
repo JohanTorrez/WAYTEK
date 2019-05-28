@@ -7,6 +7,7 @@
     <title>Ingresa o registrate</title>
     <link rel="stylesheet" href="css/bootstrap_login.css">
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -26,15 +27,15 @@
 
           <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
             
-          <form action="insert_vendedor.php" method="POST">
+          <form action="insert-vendedor.php" method="POST">
             <div class="form-row">
               <div class="form-group col-md-4">
                 <label class="h6" for="inputName"><strong>Nombre de la tienda</strong></label>
-                <input type="text" class="form-control" name="nombre" id="inputEmail4" placeholder="" required autocomplete="off">
+                <input type="text" class="form-control" name="nombre" id="inputEmail4" placeholder="" required  autocomplete="off">
               </div>
               <div class="form-group col-md-4">
                 <label class="h6" for=""><strong>Número de documento</strong></label>
-                <input type="number" class="form-control" name="documento" placeholder="# identificación" required autocomplete="off">
+                <input type="number" class="form-control" name="documento" id="" placeholder="# identificación" required autocomplete="off">
               </div>
               <div class="form-group col-md-4">
                 <label class="h6" for="inputAddress2"><strong>Teléfono de contacto</strong></label>
@@ -48,7 +49,7 @@
               </div>
               <div class="form-group col-md-4">
                 <label class="h6" for="inputState"><strong>Departamento</strong></label>
-                <select id="inputState" class="form-control" name="departamento" required autocomplete="off">
+                <select id="inputState" class="form-control" name="departamento">
                   <option selected>Huila</option>
                   <option>...</option>
                 </select>
@@ -69,10 +70,14 @@
                 <input type="text" class="form-control" name="usuario" id="" placeholder="nickname000" required autocomplete="off">
               </div>
             </div>
-
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                <label class="custom-file-label" name="imagen" for="validatedCustomFile">Elige una imagen que te identifique (ávatar)...</label>
+                <div class="invalid-feedback">Example invalid custom file feedback</div>
+            </div>
             <div class="form-group">
               <label class="h6" for="inputEmail"><strong>Contraseña</strong></label>
-              <input type="password" class="form-control" name="contrasena" id="inputPassword" placeholder="Elige una contraseña" required autocomplete="off">
+              <input type="password" class="form-control" name="contrasena" id="inputPassword" placeholder="Elige una contraseña" required>
             </div>
             <div class="form-group">
               <div class="form-check">
@@ -89,10 +94,8 @@
         </div>
       </div>
 
-    <script src="js/jquery.js"></script>
-    <script src="js/popper.js"></script>
+    <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
