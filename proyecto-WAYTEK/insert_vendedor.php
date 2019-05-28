@@ -22,7 +22,7 @@ if(isset($_POST['nombre']) && isset ($_POST['documento']) && isset ($_POST['tele
         //mover la imagen a la carpeta
         move_uploaded_file($archivo, $ruta);
 
-        $inser_tienda = $mysqli->query("INSERT INTO tienda(nombre_tienda, docu_tienda, telefono_tienda, direccion_tienda, correo_tienda, nombre_usuario_tienda, contra_tienda, foto_perfil_tienda)VALUES('$nombre_tienda','$docu_tienda', '$telefono_tienda', '$direccion_tienda', '$correo_tienda', '$usuario_tienda', '$ruta', '$contra_tienda')");
+        $inser_tienda = $mysqli->query("INSERT INTO tienda(nombre_tienda, docu_tienda, telefono_tienda, direccion_tienda, correo_tienda, nombre_usuario_tienda, contra_tienda, foto_perfil_tienda)VALUES('$nombre_tienda','$docu_tienda', '$telefono_tienda', '$direccion_tienda', '$correo_tienda', '$usuario_tienda',  '$contra_tienda', '$ruta')");
         if(!$inser_tienda){
             echo "Registro fallido - " . ($mysqli->errno). " " . ($mysqli->error);
         }
