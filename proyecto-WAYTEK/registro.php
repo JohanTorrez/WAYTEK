@@ -30,49 +30,49 @@
             <div class="form-row">
               <div class="form-group col-md-4">
                 <label class="h6" for="inputName"><strong>Nombre de la tienda</strong></label>
-                <input type="text" class="form-control" name="nombre" id="inputEmail4" placeholder="" required>
+                <input type="text" class="form-control" name="nombre" id="inputEmail4" placeholder="" required autocomplete="off">
               </div>
               <div class="form-group col-md-4">
                 <label class="h6" for=""><strong>Número de documento</strong></label>
-                <input type="number" class="form-control" name="documento" placeholder="# identificación" required>
+                <input type="number" class="form-control" name="documento" placeholder="# identificación" required autocomplete="off">
               </div>
               <div class="form-group col-md-4">
                 <label class="h6" for="inputAddress2"><strong>Teléfono de contacto</strong></label>
-                <input type="number" class="form-control" name="telefono" id="inputPhone" placeholder="" required>
+                <input type="number" class="form-control" name="telefono" id="inputPhone" placeholder="" required autocomplete="off">
               </div>
             </div>
             <div class="form-row">
               <div class="form-group col-md-4">
                 <label class="h6" for="inputCity"><strong>Ciudad</strong></label>
-                <input type="text" class="form-control" name="ciudad" id="inputCity" required>
+                <input type="text" class="form-control" name="ciudad" id="inputCity" required autocomplete="off">
               </div>
               <div class="form-group col-md-4">
                 <label class="h6" for="inputState"><strong>Departamento</strong></label>
-                <select id="inputState" class="form-control" name="departamento" required>
+                <select id="inputState" class="form-control" name="departamento" required autocomplete="off">
                   <option selected>Huila</option>
                   <option>...</option>
                 </select>
               </div>
               <div class="form-group col-md-4">
                 <label class="h6" for="inputZip"><strong>Dirección local</strong></label>
-                <input type="text" class="form-control" name="dire_residen" id="inputZip" required>
+                <input type="text" class="form-control" name="dire_residen" id="inputZip" required autocomplete="off">
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group col-6">
                 <label class="h6" for="inputEmail"><strong>Correo electrónico</strong></label>
-                <input type="email" class="form-control" name="correo" id="inputEmail" placeholder="example@email.com" required>
+                <input type="email" class="form-control" name="correo" id="inputEmail" placeholder="example@email.com" required autocomplete="off">
               </div>
               <div class="form-group col-6">
                 <label class="h6" for=""><strong>Elija un nombre de usuario</strong></label>
-                <input type="text" class="form-control" name="usuario" id="" placeholder="nickname000" required>
+                <input type="text" class="form-control" name="usuario" id="" placeholder="nickname000" required autocomplete="off">
               </div>
             </div>
 
             <div class="form-group">
               <label class="h6" for="inputEmail"><strong>Contraseña</strong></label>
-              <input type="password" class="form-control" name="contrasena" id="inputPassword" placeholder="Elige una contraseña" required>
+              <input type="password" class="form-control" name="contrasena" id="inputPassword" placeholder="Elige una contraseña" required autocomplete="off">
             </div>
             <div class="form-group">
               <div class="form-check">
