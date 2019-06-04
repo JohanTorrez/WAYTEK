@@ -28,7 +28,9 @@ if(isset($_POST['nombre']) && isset ($_POST['documento']) && isset ($_POST['tele
             echo "Registro fallido - " . ($mysqli->errno). " " . ($mysqli->error);
         }
         else{
-            echo "Registro Exitoso";
+            echo "<script>alert('USUARIO REGISTRADO');
+            window.location='ingreso.php'
+            </script>";
         }
       }
       
