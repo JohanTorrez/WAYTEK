@@ -56,37 +56,36 @@
       </div>
     </div>-->
 
-    <nav class="navbar navbar-expand pl-3 pr-0 py-0 pb-2 pt-2">
-      <a class="h3 mt-1 mr-2 text-white" href="" target="_blank"><strong>WAYTEK</strong></a>
-      <a class="navbar-brand text-white btn-primarydeg rounded px-2 py-1 text-wrap" href="administrador.php" target="_blank">Administrador</a>
-        <div class="btn-group ml-auto mr-2">
-          <button type="button" class="btn mr-2 rounded-lg btn-primarydeg text-white p-0" data-toggle="modal" data-target="#mymodal"><a class="text-decoration-none text-white px-3 py-2" href="perfil_tienda.php">Punto de la tecnología</a></button>
+    <nav class="navbar navbar-expand pl-3 pr-4 py-0 pb-2 pt-3 justify-content-between">
+      <div class="d-inline">
+        <h3 class="mt-1 mr-2 text-white d-inline" href="$" target="_blank"><strong>WAYTEK</strong></h3>
+        <a class="navbar-brand text-white btn-primarydeg rounded px-2 py-1 text-wrap" href="administrador.php" target="_blank">Administrador</a>
+      </div>
 
-            <div class="dropdown">
-             
-              <img class="imgtienda rounded-circle mr-3" width="40rem" src="<?php echo $_SESSION['foto_perfil_tienda'] ?>" id="dropdownMenuButton" alt=""  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<div class="d-flex">
 
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
-                <button class="dropdown-item" type="button">Configuración</button>
-                <button class="dropdown-item" type="button">Ayuda</button>
-                <div class="dropdown-divider"></div>
-                <form class="" action="" method="post">
-                  <input class="dropdown-item bg-cerrar text-white" type="submit" value="Cerrar sesión" name="cerrar">
-                </form>
-                <?php
-
-                  if (isset($_POST['cerrar'])) {
-
-                  echo '<script>window.location="ingreso.php"</script>';
-                  session_destroy();
-
-                  }
-
-                ?>
-              </div>
-            </div>
-        </div>
-    </nav>
+  <h5 class="mx-3 text-white my-2"><?=$_SESSION['nombre_tienda']?></h5>
+  <img class="imgtienda rounded-circle mr-3" width="40rem" height="40rem" src="<?=$_SESSION['foto_perfil_tienda']?>" id="dropdownMenuButton" alt=""  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <div class="btn-group">
+    <button type="button" class="btn rounded-lg-left btn-primarydeg text-white">
+      <a class="text-decoration-none text-white" href="perfil_tienda.php">
+        <?=$_SESSION['nombre_usuario_tienda']?>
+      </a>
+    </button>
+    <button type="button" class="btn text-white btn-primarydeg dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
+    <span class="sr-only">Palanca de dropwdown</span>
+  </button>
+  <div class="dropdown-menu">
+    <button class="dropdown-item" type="button">Configuración</button>
+    <button class="dropdown-item" type="button">Ayuda</button>
+        <div class="dropdown-divider"></div>
+        <form class="form m-0" action="cerrar_sesion.php" method="post">
+          <input class="dropdown-item bg-cerrar text-dark" type="submit" value="Cerrar sesión" name="cerrar">
+        </form>
+      </div>
+    </div>
+  </div>
+  </nav>
     <br>
     <div class="container-fluid mt-0 pt-0">
     <div class="row">
