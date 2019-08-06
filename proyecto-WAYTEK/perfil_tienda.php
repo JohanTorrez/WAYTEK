@@ -7,12 +7,12 @@ require "comprobar.php";
 <html lang="es">
 
 <head>
+    <title>Perfil | WAYTEK</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/bootstrap_admin.css">
-    <link rel="stylesheet" href="css/bootstrap_modify.css">
-    <link rel="stylesheet" href="css/sweetalert.css">
+    <link rel="stylesheet" href="sweetalert/sweetalert2.css">
     <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
     <script src="js/jquery.slim.min.js"></script>
@@ -23,7 +23,7 @@ require "comprobar.php";
     <nav class="navbar navbar-expand pl-3 pr-4 py-0 pb-2 pt-3 justify-content-between">
         <div class="d-inline">
             <h3 class="mt-1 mr-2 text-white d-inline" href="$" target="_blank"><strong>WAYTEK</strong></h3>
-            <a class="navbar-brand text-white btn-primarydeg rounded px-2 py-1 text-wrap" href="administrador.php" target="_blank">Administrador</a>
+            <a class="navbar-brand text-white btn-primarydeg rounded px-2 py-1 text-wrap" href="administrador.php">Tienda</a>
         </div>
         <div class="d-flex">
             <?php
@@ -48,8 +48,6 @@ require "comprobar.php";
                     <span class="sr-only">Palanca de dropwdown</span>
                 </button>
                 <div class="dropdown-menu dropdown-menu-right shadow-lg pb-0">
-                    <button class="dropdown-item" type="button">Configuración</button>
-                    <button class="dropdown-item" type="button">Ayuda</button>
                     <form class="form m-0" action="cerrar_sesion.php" method="post">
                         <input class="dropdown-item btn-elimi text-white rounded-bottom" type="submit" value="Cerrar sesión" name="cerrar">
                     </form>
@@ -324,9 +322,6 @@ require "comprobar.php";
 
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="js/jquery.datatable.js"></script>
-    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>
